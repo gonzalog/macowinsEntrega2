@@ -1,21 +1,17 @@
 package macoWins;
 
-//import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 public class Negocio {
 	float precioFijo;
 	Collection<Venta> ventas;
-
-	public double gananciaDelDia(Date dia){
-		double gananciaTotalDiaria=0;	
-		for(Venta venta: this.getVentas()){
-			if(venta.getFecha().equals(dia)){
-				gananciaTotalDiaria+=venta.ganancia();
-			};
-		};		
-		return gananciaTotalDiaria;
+	
+	public Double gananciaDelDia(Date dia){
+		return this.getVentas().parallelStream()
+				.filter(venta->venta.fecha.equals(dia))
+				.mapToDouble(venta->venta.ganancia())
+				.sum();
 	}
 
 	public float getPrecioFijo() {
