@@ -11,7 +11,7 @@ public class Negocio {
 	public double gananciaDelDia(Date dia){
 		double gananciaTotalDiaria=0;	
 		for(Venta venta: this.getVentas()){
-			if(venta.getFecha()==dia){
+			if(venta.getFecha().equals(dia)){
 				gananciaTotalDiaria+=venta.ganancia();
 			};
 		};		
