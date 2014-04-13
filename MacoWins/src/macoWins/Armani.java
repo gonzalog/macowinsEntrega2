@@ -1,7 +1,7 @@
 package macoWins;
 
 public class Armani implements Marca {
-	public double precioConMarcaDe(double unPrecioConImpuestos){
-		return unPrecioConImpuestos*1.65;
+	public double precioConMarcaDe(double precioOriginal){
+		return precioOriginal*1.65;
 	}
 }

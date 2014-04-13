@@ -1,5 +1,5 @@
 package macoWins;
 
 public interface Marca {
-	public double precioConMarcaDe(double precioConInpuestos);
+	public double precioConMarcaDe(double precioOriginal);
 }
