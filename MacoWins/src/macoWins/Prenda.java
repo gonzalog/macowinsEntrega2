@@ -1,5 +1,7 @@
 package macoWins;
 
+//Hola
+
 public abstract class Prenda {
 	Negocio negocio;
 	Marca marca;
